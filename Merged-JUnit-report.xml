@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="Mocha Tests" time="2.157" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-02-14T13:24:25" tests="0" file="cypress\e2e\todo_app\todo_smoke.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="[smoke] Todo app list" timestamp="2024-02-14T13:24:25" tests="1" time="2.153" failures="0">
+    <testcase name="[smoke] Todo app list displays two todo items by default" time="0.508" classname="displays two todo items by default">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2024-02-14T13:24:15" tests="0" file="cypress\e2e\todo_app\todo_interactions.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="[interactions] Todo app list with a checked task" timestamp="2024-02-14T13:24:15" tests="3" time="7.975" failures="1">
+    <testcase name="[interactions] Todo app list with a checked task can filter for uncompleted tasks" time="1.522" classname="can filter for uncompleted tasks">
+    </testcase>
+    <testcase name="[interactions] Todo app list with a checked task can filter for completed tasks" time="0.263" classname="can filter for completed tasks">
+    </testcase>
+    <testcase name="[interactions] Todo app list with a checked task can delete all completed tasks" time="0.000" classname="can delete all completed tasks">
+      <failure message="Timed out retrying after 4000ms: Not enough elements found. Found '1', expected '2'." type="AssertionError">AssertionError: Timed out retrying after 4000ms: Not enough elements found. Found '1', expected '2'.
+    at Context.eval (webpack:///./cypress/e2e/todo_app/todo_interactions.cy.js:34:7)
+
+      + expected - actual
+
+      -1
+      +2
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,6 @@
+host: https://shahvinay007.testrail.io
+username: shahvinay802@gmail.com
+password: Vinay@0369
+project: Automation_Test_Cases
+title: Cypress Automated Test Run (Code-first)
+case-matcher: name
