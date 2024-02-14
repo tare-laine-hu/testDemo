@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    parameters {
-
-    }
-
     stages {
         stage('Deploying') {
             steps {
@@ -13,7 +9,7 @@ pipeline {
         stage('Testing') {
             steps {
                 bat 'npm i'
-                bat 'npx cypress run --browser ${BROWSER} --spec ${SPEC} --headed --reporter junit --reporter-options "mochaFile=reports/junit-[hash].xml"'
+                bat 'npx cypress run --reporter junit --reporter-options "mochaFile=reports/junit-[hash].xml"'
             }
         }
         stage('Uploading into TestRail') {
