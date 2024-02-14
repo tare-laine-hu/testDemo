@@ -1,13 +1,9 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'SPEC', defaultValue:'cypress/e2e/**/**', description:'Enter the path you want to execute')
-        /* groovylint-disable-next-line LineLength */
-        choice(name:'BROWSER', choices:['chrome', 'edge', 'firefox'], description:'Choice the browser you want to execute your script')
+
     }
-    options {
-        ansiColor('xterm')
-    }
+
     stages {
         stage('Deploying') {
             steps {
@@ -17,7 +13,7 @@ pipeline {
         stage('Testing') {
             steps {
                 bat 'npm i'
-                bat "npx cypress run --browser ${BROWSER} --spec ${SPEC} --headed --reporter junit --reporter-options 'mochaFile=reports/junit-[hash].xml'"
+                bat 'npx cypress run --browser ${BROWSER} --spec ${SPEC} --headed --reporter junit --reporter-options "mochaFile=reports/junit-[hash].xml"'
             }
         }
         stage('Uploading into TestRail') {
